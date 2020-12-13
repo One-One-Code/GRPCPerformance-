@@ -28,8 +28,6 @@ namespace GrpcClient
 
             watch.Stop();
             var m1 = watch.Elapsed.TotalSeconds;
-            //Console.WriteLine(watch.ElapsedMilliseconds);
-
 
             watch = new Stopwatch();
             watch.Start();
@@ -44,7 +42,6 @@ namespace GrpcClient
             }
 
             watch.Stop();
-            //Console.WriteLine(watch.ElapsedMilliseconds);
             var m2 = watch.Elapsed.TotalSeconds;
 
             watch = new Stopwatch();
@@ -66,7 +63,6 @@ namespace GrpcClient
             }
 
             watch.Stop();
-            //Console.WriteLine(watch.ElapsedMilliseconds);
             var m3 = watch.Elapsed.TotalSeconds;
 
 
@@ -89,7 +85,6 @@ namespace GrpcClient
             }
 
             watch.Stop();
-            //Console.WriteLine(watch.ElapsedMilliseconds);
             var m4 = watch.Elapsed.TotalSeconds;
             Console.WriteLine($"================单线程1000次============");
             Console.WriteLine($"WCF:{m1}");
@@ -126,8 +121,6 @@ namespace GrpcClient
 
             watch.Stop();
             var m1 = watch.Elapsed.TotalSeconds;
-            //Console.WriteLine(watch.ElapsedMilliseconds);
-
 
             watch = new Stopwatch();
             watch.Start();
@@ -152,7 +145,6 @@ namespace GrpcClient
             Task.WaitAll(threads.ToArray());
           
             watch.Stop();
-            //Console.WriteLine(watch.ElapsedMilliseconds);
             var m2 = watch.Elapsed.TotalSeconds;
 
             watch = new Stopwatch();
@@ -186,7 +178,6 @@ namespace GrpcClient
            
 
             watch.Stop();
-            //Console.WriteLine(watch.ElapsedMilliseconds);
             var m3 = watch.Elapsed.TotalSeconds;
 
 
@@ -221,7 +212,6 @@ namespace GrpcClient
 
 
             watch.Stop();
-            //Console.WriteLine(watch.ElapsedMilliseconds);
             var m4 = watch.Elapsed.TotalSeconds;
             Console.WriteLine($"================{count}线程，每个线程100次============");
             Console.WriteLine($"WCF:{m1}");
